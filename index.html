@@ -5,30 +5,108 @@
     <style>
       * { margin: 0; padding: 0; box-sizing: border-box; }
       body { font: 13px Helvetica, Arial; }
-      form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
-      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
-      form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
-      #messages { list-style-type: none; margin: 0; padding: 0; }
-      #messages li { padding: 5px 10px; }
-      #messages li:nth-child(odd) { background: #eee; }
+      .txt-message{
+        width: 100%;
+      }
+      #form-message{
+        position: fixed;
+        bottom: 0px; 
+      }
     </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
   </head>
   <body>
-    <ul id="messages"></ul>
-    <form action="">
-      <input id="m" autocomplete="off" /><button>Send</button>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10">
+          <div class="well">
+            <h1>Messages</h1>
+            <ul class="list-group" id="messages"></ul>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="well">
+            <h2>Users<h2>
+            <ul class="list-group" id="users"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form id="form-message" action="">
+      <div class="input-group input-group-lg txt-message">
+        <input type="text" class="form-control" placeholder="Message" id="m"></input>
+        <div class="input-group-btn"><button class="btn btn-primary">Send</button></div>
+      </div>
     </form>
+    <div id="login-modal" class="modal fade">
+      <div class="modal-dialog">
+        <form class="modal-content" id="form-login" action="">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">What's your name?</h4>
+            </div>
+            <div class="modal-body">
+              <div class="input-group input-group-lg">
+                <span class="input-group-addon">@</span>
+                <input type="text" class="form-control" placeholder="Username" id="txt-username"></input>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button class="btn btn-primary" id="btn-start">Start Chatting</button>
+            </div>
+        </form>
+      </div>
+    </div>
+
     <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <script>
-      var socket = io();
-      $('form').submit(function(){
-        socket.emit('send_message', $('#m').val());
-        $('#m').val('');
-        return false;
-      });
-      socket.on('recieve_message', function(msg){
-        $("#messages").append($("<li>").text(msg));
+      $(function(){
+        var username = "Anonymous";
+        var socket = io();
+
+        $("#login-modal").modal("show");
+
+        $("#form-message").submit(function(){
+          socket.emit("send_message", {username: username, message: $("#m").val()});
+          $("#m").val("");
+          return false;
+        });
+        $("#form-login").submit(function(){
+          username = $("#txt-username").val();
+          $("#login-modal").modal("hide");
+          socket.emit("user_join", username);
+          return false;
+        });
+        socket.on("init", function(data){
+          data.users.forEach(function (user) {
+            addUser(user);
+          })
+          data.messages.forEach(function (message) {
+            addMessage(message);
+          })
+        })
+        socket.on("user_joined", function(user){
+          addUser(user);
+        })
+        socket.on("user_left", function(uname){
+          $("#users").find(".user[data-username=" + uname + "]").remove();
+        })
+        socket.on("recieve_message", function(msg){
+          addMessage(msg);
+        })
+        function addUser(user){
+          $("#users").append($("<li class='list-group-item user' data-username='" + user.username + "'>").text(user.username));
+        }
+        function addMessage (msg) {
+          var item = $("<li class='list-group-item message'>")
+          item.append($("<h4 class='list-group-item-heading'>").text(msg.username));    
+          item.append($("<div class='list-group-item-text'>").text(msg.message));
+          $("#messages").prepend(item);
+          $("#messages .message:gt(20)").remove();
+        }
       })
     </script>
   </body>
