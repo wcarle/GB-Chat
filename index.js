@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
+var sanitizeHtml = require('sanitize-html');
 
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
@@ -32,6 +33,9 @@ io.on('connection', function(socket){
 	})
 	//User sent message
 	socket.on('send_message', function (msg) {
+		//Script injection is no fun
+		msg.message = sanitizeHtml(msg.message);
+		msg.username = sanitizeHtml(msg.username);
 		var user = getUser(socket.id);
 		//Check if user can submit another message
 		if(!user.lastMessage || user.lastMessage.getTime() + cooldown < new Date().getTime()){
@@ -43,6 +47,7 @@ io.on('connection', function(socket){
 	})
 	//New user joined
 	socket.on('user_join', function (username) {
+		username = sanitizeHtml(username);
 		console.log('user joined: ' + username);
 		var user = {id: socket.id, username: username};
 		users.push(user);
