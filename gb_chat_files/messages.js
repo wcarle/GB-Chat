@@ -1,0 +1,377 @@
+//Messages:
+
+//setup
+{  
+   "sid":"f_4NXiQJqC-0TqtDAAAL",
+   "upgrades":[  
+
+   ],
+   "pingInterval":25000,
+   "pingTimeout":60000
+}
+//initialize:
+[  
+   "initialize",
+   {  
+      "id":110673,
+      "username":"wcarle",
+      "display_name":"wcarle",
+      "is_anonymous":0,
+      "is_moderator":0,
+      "is_staff":0,
+      "is_staffOrModerator":0,
+      "is_banned":false,
+      "is_subscriber_monthly":0,
+      "is_subscriber_yearly":1,
+      "is_subscriber":1,
+      "is_vip":0,
+      "chatBackgroundColor":null,
+      "rememberMe":"UGhvZW5peFxVc2VyQnVuZGxlXEVudGl0eVxVc2VyOmQyTmhjbXhsOjE3MzE0MzIzMTg6ZjFhZjM2YzBiYjIzNTc0M2ZhYWUyMDhkYjAyOTJhNTU0MjNlY2E0MGQ5YjM5NGNhYjA4Y2U1NmEwOTBkMjVkMQ==",
+      "compactUser":{  
+         "i":"1b051",
+         "un":"wcarle",
+         "f":16,
+         "a":0
+      },
+      "clientId":"f_4NXiQJqC-0TqtDAAAL"
+   },
+   {  
+      "topNotification":"",
+      "bottomNotification":""
+   }
+]
+
+//initialize_staff:
+
+[  
+   "initialize_staff",
+   {  
+      "rorie":"{\"id\":87610,\"username\":\"rorie\",\"display_name\":\"Rorie\",\"is_anonymous\":0,\"is_moderator\":1,\"is_staff\":1,\"is_staffOrModerator\":1,\"is_banned\":false,\"is_subscriber_monthly\":0,\"is_subscriber_yearly\":1,\"is_subscriber\":1,\"is_vip\":0,\"chatBackgroundColor\":null,\"rememberMe\":\"UGhvZW5peFxVc2VyQnVuZGxlXEVudGl0eVxVc2VyOmNtOXlhV1U9OjE3MzE5NjQyNDU6YmRmYmY4ODMxMTk2ZTNjNjE5YzI4ODcwNGVjZTNjODA5NjEyNTFiNDA0YzA3NzI5MzE5NjQ4Yzg1MzIxMDkxMw==\",\"compactUser\":{\"i\":\"1563a\",\"un\":\"rorie\",\"f\":19,\"a\":0,\"dn\":\"Rorie\"},\"clientId\":\"9bRb76aE__uCz2MCAAAL\"}",
+      "marino":"{\"id\":1992,\"username\":\"marino\",\"display_name\":\"Marino\",\"is_anonymous\":0,\"is_moderator\":1,\"is_staff\":1,\"is_staffOrModerator\":1,\"is_banned\":false,\"is_subscriber_monthly\":0,\"is_subscriber_yearly\":1,\"is_subscriber\":1,\"is_vip\":0,\"chatBackgroundColor\":null,\"rememberMe\":\"UGhvZW5peFxVc2VyQnVuZGxlXEVudGl0eVxVc2VyOmJXRnlhVzV2OjE3MzI2NzE0MDY6OTVmNWY3MDE3ZjRjNWM4YWMwYTIyYzIxZTJjMDgyMGZiYjcxYjFhZmE5Y2Q2ZGFmNzJiYTZlM2M5NTI2MTMzMg==\",\"compactUser\":{\"i\":\"7c8\",\"un\":\"marino\",\"f\":19,\"a\":0,\"dn\":\"Marino\"},\"clientId\":\"ZwOOrZOkcI0VMK_WAAAB\"}",
+      "drewbert":"{\"id\":23546,\"username\":\"drewbert\",\"display_name\":\"drewbert\",\"is_anonymous\":0,\"is_moderator\":0,\"is_staff\":1,\"is_staffOrModerator\":1,\"is_banned\":false,\"is_subscriber_monthly\":0,\"is_subscriber_yearly\":1,\"is_subscriber\":1,\"is_vip\":0,\"chatBackgroundColor\":null,\"rememberMe\":\"UGhvZW5peFxVc2VyQnVuZGxlXEVudGl0eVxVc2VyOlpISmxkMkpsY25RPToxNzMxMzY1OTEyOjU5YzcwNzg3M2UwNzQwMTg2YWI2NTg2MGRkMmU0ZTE1Yzc5MDEyY2Y3OTY2NzI5ZTAwYTFmMGJhZDc2YjkyNjY=\",\"compactUser\":{\"i\":\"5bfa\",\"un\":\"drewbert\",\"f\":17,\"a\":0},\"clientId\":\"LAe_OCBaWFljePmLAAAA\"}"
+   }
+]
+
+//initialize_moderators:
+[  
+   "initialize_moderators",
+   {  
+      "finaldasa":"{\"id\":31685,\"username\":\"finaldasa\",\"display_name\":\"FinalDasa\",\"is_anonymous\":0,\"is_moderator\":1,\"is_staff\":0,\"is_staffOrModerator\":1,\"is_banned\":false,\"is_subscriber_monthly\":0,\"is_subscriber_yearly\":1,\"is_subscriber\":1,\"is_vip\":0,\"chatBackgroundColor\":null,\"rememberMe\":\"UGhvZW5peFxVc2VyQnVuZGxlXEVudGl0eVxVc2VyOlptbHVZV3hrWVhOaDoxNzMxMjg2MTExOjg3ZGUyMTA2NWY3N2E1ZGE1ZjZmM2RmMTRjYzBiNmJmNGE5NWMwYmY5NDMxMWUzODczNjcwZDJjMGRkMGE4NmE=\",\"compactUser\":{\"i\":\"7bc5\",\"un\":\"finaldasa\",\"f\":18,\"a\":0,\"dn\":\"FinalDasa\"},\"clientId\":\"WCa1r_aqJhT-utVDAAAH\"}"
+   }
+]
+
+
+//initialize_chat:
+[  
+   "initialize_chat",
+   {  
+      "userThrottle":0,
+      "globalThrottle":10000
+   }
+]
+
+//initialize_messages:
+[  
+   "initialize_messages",
+   [  
+      "{\"id\":64618496,\"user\":{\"i\":\"1e822\",\"un\":\"rukus\",\"f\":16,\"a\":0,\"dn\":\"Rukus\"},\"message\":\"helllooooooo\",\"replyToId\":0,\"replyToUsers\":[]}",
+      "{\"id\":65077248,\"user\":{\"i\":\"228a\",\"un\":\"mrgetbonus\",\"f\":16,\"a\":0,\"dn\":\"MrGetBonus\"},\"message\":\"YEAH%20CHAT\",\"replyToId\":0,\"replyToUsers\":[]}",
+      "{\"id\":65994752,\"user\":{\"i\":\"30a16\",\"un\":\"deadpancakes\",\"f\":16,\"a\":0,\"dn\":\"DeadpanCakes\"},\"message\":\"Helooo\",\"replyToId\":0,\"replyToUsers\":[]}",
+      "{\"id\":65339392,\"user\":{\"i\":\"1a650\",\"un\":\"gazaar\",\"f\":16,\"a\":0,\"dn\":\"Gazaar\"},\"message\":\"jams\",\"replyToId\":0,\"replyToUsers\":[]}",
+      "{\"id\":66191360,\"user\":{\"i\":\"10453\",\"un\":\"fisk0\",\"f\":16,\"a\":0},\"message\":\"chat!\",\"replyToId\":0,\"replyToUsers\":[]}",
+      "{\"id\":65732608,\"user\":{\"i\":\"1bcf\",\"un\":\"xanadu\",\"f\":8,\"a\":0,\"dn\":\"Xanadu\"},\"message\":\"yo%20chat\",\"replyToId\":0,\"replyToUsers\":[]}",
+      "{\"id\":65601536,\"user\":{\"i\":\"32960\",\"un\":\"sniperguy\",\"f\":16,\"a\":0,\"dn\":\"SniperGuy\"},\"message\":\"Hurray%20chat\",\"replyToId\":0,\"replyToUsers\":[]}",
+      "{\"id\":65011712,\"user\":{\"i\":\"22cb3\",\"un\":\"turra\",\"f\":16,\"a\":0,\"dn\":\"Turra\"},\"message\":\"Happy%20new%20chat\",\"replyToId\":0,\"replyToUsers\":[]}",
+      "{\"id\":66387968,\"user\":{\"i\":\"947a\",\"un\":\"helfmyselp\",\"f\":16,\"a\":0},\"message\":\"happy%20friday\",\"replyToId\":0,\"replyToUsers\":[]}",
+      "{\"id\":65994753,\"user\":{\"i\":\"30a16\",\"un\":\"deadpancakes\",\"f\":16,\"a\":0,\"dn\":\"DeadpanCakes\"},\"message\":\"Games!\",\"replyToId\":0,\"replyToUsers\":[]}",
+      "{\"id\":66584576,\"user\":{\"i\":\"3afb6\",\"un\":\"rafar\",\"f\":16,\"a\":0},\"message\":\"oh%20look%2C%20chat\",\"replyToId\":0,\"replyToUsers\":[]}",
+      "{\"id\":64749568,\"user\":{\"i\":\"37e17\",\"un\":\"audiofatigue\",\"f\":16,\"a\":0,\"dn\":\"AudioFatigue\"},\"message\":\"pangolin%20time!\",\"replyToId\":0,\"replyToUsers\":[]}",
+      "{\"id\":65994754,\"user\":{\"i\":\"10f8\",\"un\":\"forcen\",\"f\":16,\"a\":0,\"dn\":\"Forcen\"},\"message\":\"sourceforge%20is%20down%20damnit%2C%20and%20hello%20everyone\",\"replyToId\":0,\"replyToUsers\":[]}",
+      "{\"id\":66060288,\"user\":{\"i\":\"1fee4\",\"un\":\"super_alan\",\"f\":16,\"a\":0,\"dn\":\"Super_Alan\"},\"message\":\"hallo\",\"replyToId\":0,\"replyToUsers\":[]}",
+      "{\"id\":65536000,\"user\":{\"i\":\"1c34f\",\"un\":\"meaninoflife42\",\"f\":16,\"a\":0},\"message\":\"2015%20jams!\",\"replyToId\":0,\"replyToUsers\":[]}",
+      "{\"id\":65339393,\"user\":{\"i\":\"3761c\",\"un\":\"redmenace\",\"f\":8,\"a\":0,\"dn\":\"Redmenace\"},\"message\":\"Yo\",\"replyToId\":0,\"replyToUsers\":[]}",
+      "{\"id\":64880640,\"user\":{\"i\":\"7bc5\",\"un\":\"finaldasa\",\"f\":18,\"a\":0,\"dn\":\"FinalDasa\"},\"message\":\"Hello\",\"replyToId\":0,\"replyToUsers\":[]}",
+      "{\"id\":65011713,\"user\":{\"i\":\"32a3e\",\"un\":\"nebneb\",\"f\":16,\"a\":0},\"message\":\"Fri%20(hi)\",\"replyToId\":0,\"replyToUsers\":[]}",
+      "{\"id\":65601537,\"user\":{\"i\":\"13c6d\",\"un\":\"beachthunder\",\"f\":16,\"a\":0,\"dn\":\"BeachThunder\"},\"message\":\"Hello\",\"replyToId\":0,\"replyToUsers\":[]}",
+      "{\"id\":66584577,\"user\":{\"i\":\"b4a7\",\"un\":\"mrbubbles\",\"f\":16,\"a\":0,\"dn\":\"MrBubbles\"},\"message\":\"first%20live%20stream%20of%20the%20year!\",\"replyToId\":0,\"replyToUsers\":[]}",
+      "{\"id\":65732609,\"user\":{\"i\":\"4079c\",\"un\":\"figgerson\",\"f\":8,\"a\":0,\"dn\":\"Figgerson\"},\"message\":\"Yo\",\"replyToId\":0,\"replyToUsers\":[]}",
+      "{\"id\":66584578,\"user\":{\"i\":\"3a2a0\",\"un\":\"j4r4te\",\"f\":8,\"a\":0,\"dn\":\"J4r4te\"},\"message\":\"Music%20is%20spooky\",\"replyToId\":0,\"replyToUsers\":[]}",
+      "{\"id\":66387969,\"user\":{\"i\":\"2ea76\",\"un\":\"mastagravy\",\"f\":8,\"a\":0,\"dn\":\"Mastagravy\"},\"message\":\"It's%20been%20too%20long%20duders!\",\"replyToId\":0,\"replyToUsers\":[]}",
+      "{\"id\":65667072,\"user\":{\"i\":\"213bd\",\"un\":\"m16mojo2\",\"f\":8,\"a\":0},\"message\":\"What's%20up%20party%20people!\",\"replyToId\":0,\"replyToUsers\":[]}",
+      "{\"id\":65011714,\"user\":{\"i\":\"305d8\",\"un\":\"stickdutra\",\"f\":8,\"a\":0},\"message\":\"Hi%20folks\",\"replyToId\":0,\"replyToUsers\":[]}",
+      "{\"id\":66060289,\"user\":{\"i\":\"6630\",\"un\":\"nemesis2k\",\"f\":8,\"a\":0,\"dn\":\"Nemesis2K\"},\"message\":\"*points%20at%20his%20dick*%20i%20need%20to%20pee\",\"replyToId\":0,\"replyToUsers\":[]}"
+   ]
+]
+
+//initialize_mod_messages:
+[  
+   "initialize_mod_messages",
+   [  
+      "{\"id\":64880641,\"user\":{\"i\":\"7bc5\",\"un\":\"finaldasa\",\"f\":18,\"a\":0,\"dn\":\"FinalDasa\"},\"message\":\"Hello\",\"replyToId\":0,\"replyToUsers\":[]}"
+   ]
+]
+
+
+//initialize_poll:
+[  
+   "initialize_poll",
+   {  
+      "presets":{  
+         "d-pad":{  
+            "items":[  
+               {  
+                  "answer":"Up"
+               },
+               {  
+                  "answer":"Down"
+               },
+               {  
+                  "answer":"Left"
+               },
+               {  
+                  "answer":"Right"
+               }
+            ]
+         },
+         "yes-no":{  
+            "items":[  
+               {  
+                  "answer":"Yes"
+               },
+               {  
+                  "answer":"No"
+               }
+            ]
+         },
+         "true-false":{  
+            "items":[  
+               {  
+                  "answer":"True"
+               },
+               {  
+                  "answer":"False"
+               },
+               {  
+                  "answer":"Tralse"
+               }
+            ]
+         },
+         "me-not-me":{  
+            "items":[  
+               {  
+                  "answer":"Me"
+               },
+               {  
+                  "answer":"Not Me"
+               }
+            ]
+         },
+         "me-not-me-thatguy":{  
+            "items":[  
+               {  
+                  "answer":"Me"
+               },
+               {  
+                  "answer":"Not Me"
+               },
+               {  
+                  "answer":"That Guy"
+               }
+            ]
+         }
+      },
+      "lastPoll":null
+   }
+]
+
+//send message:
+[  
+   "send_message",
+   {  
+      "message":"Our%20trampoline%20dodgeball%20place%20serves%20liquor...%20which%20seems%20like%20a%20bad%20idea",
+      "replyToId":0,
+      "replyToUsers":[  
+
+      ]
+   }
+]
+//user_left:
+[  
+   "user_left",
+   {  
+      "id":109919,
+      "username":"iambecomedeath",
+      "display_name":"IAmBecomeDeath",
+      "is_anonymous":0,
+      "is_moderator":0,
+      "is_staff":0,
+      "is_staffOrModerator":0,
+      "is_banned":false,
+      "is_subscriber_monthly":0,
+      "is_subscriber_yearly":1,
+      "is_subscriber":1,
+      "is_vip":0,
+      "chatBackgroundColor":null,
+      "rememberMe":"UGhvZW5peFxVc2VyQnVuZGxlXEVudGl0eVxVc2VyOmFXRnRZbVZqYjIxbFpHVmhkR2c9OjE3MzE0ODE5NzQ6ZGVjYjBhYjFkYjc1ZTdiY2VjZjJiNWVmMmMzZWE2M2I3NzUwOWI3OGVmNmVhYzc0ZjQ2NTRmODYyNzFiZDE1Ng==",
+      "compactUser":{  
+         "i":"1ad5f",
+         "un":"iambecomedeath",
+         "f":16,
+         "a":0,
+         "dn":"IAmBecomeDeath"
+      },
+      "clientId":"91XPTZP_ugAEEEhsAAD1",
+      "_lastMsg":0,
+      "_throttle":0,
+      "_floodCount":0
+   },
+   null
+]
+
+//user_joined:
+[  
+   "user_joined",
+   {  
+      "id":105467,
+      "username":"bunkerface",
+      "display_name":"Bunkerface",
+      "is_anonymous":0,
+      "is_moderator":0,
+      "is_staff":0,
+      "is_staffOrModerator":0,
+      "is_banned":false,
+      "is_subscriber_monthly":0,
+      "is_subscriber_yearly":1,
+      "is_subscriber":1,
+      "is_vip":0,
+      "chatBackgroundColor":null,
+      "rememberMe":"UGhvZW5peFxVc2VyQnVuZGxlXEVudGl0eVxVc2VyOlluVnVhMlZ5Wm1GalpRPT06MTczMTM0MTAzNzo4YWEzZjAzYWU0YzNkZDczY2Y2MjFhNzc1YTZhNjg5MWJmM2FhM2UzYmUwMmZhMDQ5YTg1NzJlZDc3ZWQ0NTA2",
+      "compactUser":{  
+         "i":"19bfb",
+         "un":"bunkerface",
+         "f":16,
+         "a":0,
+         "dn":"Bunkerface"
+      },
+      "clientId":"CF0v8Ey-dvI9Z6eLAAD_",
+      "_lastMsg":0,
+      "_throttle":0,
+      "_floodCount":0
+   },
+   null
+]
+
+
+//receive_message:
+[  
+   "receive_message",
+   {  
+      "user":{  
+         "i":"875",
+         "un":"orange_pork",
+         "f":16,
+         "a":0,
+         "dn":"Orange_Pork"
+      },
+      "message":"This%20is%20the%20run",
+      "id":65536072
+   }
+]
+//recieve_message (with reply)
+[  
+   "receive_message",
+   {  
+      "user":{  
+         "i":"2b400",
+         "un":"benmo316",
+         "f":16,
+         "a":0,
+         "dn":"Benmo316"
+      },
+      "message":"No%2C%20I'm%20in%20Wisconsin.%20We%20don't%20have%20%22real%22%20bridges%20here.%20Just%20seems%20weird%20to%20shut%20down%20a%20major%20bridge.",
+      "id":64749689,
+      "replyToId":"3f20092",
+      "replyToUsers":[  
+         "mb"
+      ]
+   }
+]
+
+//poll_results
+["poll_results",[32,273,57,23,33]]
+
+//poll_vote
+["poll_vote",1]
+
+//new_poll
+[  
+   "new_poll",
+   {  
+      "question":"millenium falcon vs. enterprise 1701-D",
+      "answers":[  
+         {  
+            "id":0,
+            "answer":"Falcon",
+            "votes":0
+         },
+         {  
+            "id":1,
+            "answer":"Enterprise",
+            "votes":0
+         }
+      ],
+      "askedBy":"rorie",
+      "started":1420851142150,
+      "expires":1420851172150,
+      "timeLimit":30000,
+      "serverNow":1420851142151
+   }
+]
+
+//update_user_count:
+[  
+   "update_user_count",
+   {  
+      "u":3097,
+      "a":0
+   }
+]
+//called mult times in a row, strange?
+
+//moderator_left:
+[  
+   "moderator_left",
+   {  
+      "id":14741,
+      "username":"mracoon",
+      "display_name":"mracoon",
+      "is_anonymous":0,
+      "is_moderator":1,
+      "is_staff":0,
+      "is_staffOrModerator":1,
+      "is_banned":false,
+      "is_subscriber_monthly":0,
+      "is_subscriber_yearly":1,
+      "is_subscriber":1,
+      "is_vip":0,
+      "chatBackgroundColor":null,
+      "rememberMe":"UGhvZW5peFxVc2VyQnVuZGxlXEVudGl0eVxVc2VyOmJYSmhZMjl2Ymc9PToxNzM1NzMxNjU2OjA0YTMwM2YwYzYzNTJlOWQzYTY3ZDc2NTRjMzNjMDY5MGVjNTU1MTM3M2U1M2VhN2U5NDk5MDllZjYzNmYyOTI=",
+      "compactUser":{  
+         "i":"3995",
+         "un":"mracoon",
+         "f":18,
+         "a":0
+      },
+      "clientId":"PKk5H3mem2dtZW_1AACM",
+      "_lastMsg":0,
+      "_throttle":0,
+      "_floodCount":0
+   },
+   null
+]
+
+pong // me
+ping // server
+ m_Socket.on("ping", function() {
+	m_Socket.emit("pong")
+});
