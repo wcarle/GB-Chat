@@ -35,7 +35,7 @@
     <form id="form-message" action="">
       <div class="input-group input-group-lg txt-message">
         <input type="text" class="form-control" placeholder="Message" id="m"></input>
-        <div class="input-group-btn"><button class="btn btn-primary">Send</button></div>
+        <div class="input-group-btn"><button class="btn btn-primary btn-send">Send</button></div>
       </div>
     </form>
     <div id="login-modal" class="modal fade">
@@ -62,24 +62,51 @@
     <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="/public/emotes.js"></script>
     <script>
       $(function(){
         var username = "Anonymous";
         var socket = io();
+        //TODO: Handle connection events, errors, retrys, etc.
+        
+        var cooldown = 10000;
+        var secondsLeft = 0;
 
+        //Show login modal
         $("#login-modal").modal("show");
 
-        $("#form-message").submit(function(){
-          socket.emit("send_message", {username: username, message: $("#m").val()});
-          $("#m").val("");
-          return false;
-        });
+        //Event: submit login
         $("#form-login").submit(function(){
           username = $("#txt-username").val();
           $("#login-modal").modal("hide");
           socket.emit("user_join", username);
           return false;
         });
+
+        //Event: submit message
+        $("#form-message").submit(function(){
+          socket.emit("send_message", {username: username, message: $("#m").val()});
+          $("#m").val("");
+
+          //Disable button until cooldown is complete
+          $(".btn-send").attr("disabled", "disabled").text("Cooldown 10");
+          secondsLeft = cooldown / 1000;
+
+          //Tick cooldown clock
+          var interval = setInterval(function () {
+            if(--secondsLeft == 0){
+              $(".btn-send").removeAttr("disabled").text("Send");
+              secondsElapsed = 0;
+              clearInterval(interval);
+            }
+            else{
+              $(".btn-send").text("Cooldown " + secondsLeft);
+            }
+          }, 1000)
+          return false;
+        });
+
+        //Socket: initialize chat
         socket.on("init", function(data){
           data.users.forEach(function (user) {
             addUser(user);
@@ -88,22 +115,54 @@
             addMessage(message);
           })
         })
+
+        //Socket: another user joined
         socket.on("user_joined", function(user){
           addUser(user);
         })
+
+        //Socket: another user left
         socket.on("user_left", function(uname){
           $("#users").find(".user[data-username=" + uname + "]").remove();
         })
+
+        //Socket: another user sent a message
         socket.on("recieve_message", function(msg){
           addMessage(msg);
         })
+
+        //Socket: admin set cooldown
+        socket.on("set_cooldown", function(cool){
+          cooldown = cool;
+          
+        })
+
+        //Socket: pingpong to keep connection alive
+        socket.on('ping', function(data){
+          socket.emit('pong', {ball: 1});
+        });
+
+        //Add user to user list
         function addUser(user){
           $("#users").append($("<li class='list-group-item user' data-username='" + user.username + "'>").text(user.username));
         }
+
+        //Add message to chat
         function addMessage (msg) {
+
+          var emoteRegex = /:\b[a-z]+/g;
+          var emoteTokens = msg.message.match(emoteRegex);
+          if(emoteTokens && emoteTokens.length > 0){
+            emoteTokens.forEach(function (token) {
+              var emote = emotes[token.substring(1)];
+              if(emote){
+                msg.message = msg.message.replace(token, '<img src="' + emote + '">');
+              }
+            })
+          }
           var item = $("<li class='list-group-item message'>")
           item.append($("<h4 class='list-group-item-heading'>").text(msg.username));    
-          item.append($("<div class='list-group-item-text'>").text(msg.message));
+          item.append($("<div class='list-group-item-text'>").html(msg.message));
           $("#messages").prepend(item);
           $("#messages .message:gt(20)").remove();
         }
