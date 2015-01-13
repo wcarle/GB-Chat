@@ -7,5 +7,7 @@ Technology used: PHP, NGINX, Socket.IO, Akamai, Redis
 
 Client Side: Handlebars, jquery.js, jquery-ui.js. swfobject.js, modernizer.js
 
+More information in the <a href="https://github.com/wcarle/GB-Chat/wiki">Wiki</a>
+
 Here is my best guess at the current GiantBomb chat architecture:
 <img src="https://raw.githubusercontent.com/wcarle/GB-Chat/master/public/GBChat.png"></img>
